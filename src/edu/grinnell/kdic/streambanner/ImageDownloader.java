@@ -13,7 +13,7 @@
  * the License.
  */
 
-package edu.grinnell.kdic;
+package edu.grinnell.kdic.streambanner;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

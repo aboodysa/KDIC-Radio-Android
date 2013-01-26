@@ -2,6 +2,7 @@ package edu.grinnell.kdic;
 
 
 
+import edu.grinnell.kdic.streambanner.StreamBannerFragment;
 import android.os.Bundle;
 //import android.net.Uri;
 //import android.widget.ImageView;
