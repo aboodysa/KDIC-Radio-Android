@@ -22,6 +22,10 @@ public class MainActivity extends FragmentActivity {
         	.replace(R.id.radio_banner_container, new StreamBannerFragment())
         	.commit();
         
+        getSupportFragmentManager().beginTransaction()
+    	.replace(R.id.radio_banner_container, new BrowserViewPager())
+    	.commit();
+        
     }
     
 }
