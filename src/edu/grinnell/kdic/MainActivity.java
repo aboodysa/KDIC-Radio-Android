@@ -2,6 +2,7 @@ package edu.grinnell.kdic;
 
 
 
+import edu.grinnell.kdic.browser.BrowserViewPager;
 import edu.grinnell.kdic.streambanner.StreamBannerFragment;
 import android.os.Bundle;
 //import android.net.Uri;
@@ -23,7 +24,7 @@ public class MainActivity extends FragmentActivity {
         	.commit();
         
         getSupportFragmentManager().beginTransaction()
-    	.replace(R.id.radio_banner_container, new BrowserViewPager())
+    	.replace(R.id.radio_banner_container, new BrowserViewPager(null))
     	.commit();
         
     }
