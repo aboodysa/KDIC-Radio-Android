@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.wifi.WifiManager;
@@ -74,7 +75,8 @@ public class StreamBannerFragment extends Fragment implements OnClickListener {
 		kdicStream.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 			@Override
 			public void onPrepared(MediaPlayer mp) {
-				kdicStream.start();
+				//kdicStream.start();
+				getActivity().startService(new Intent(getActivity(),MusicService.class));
 				mLoaded = true;
 				isLoading = false;
 				// playButton.setBackgroundResource(R.drawable.button_blue_play);
@@ -157,7 +159,6 @@ public class StreamBannerFragment extends Fragment implements OnClickListener {
 	public void onClick(View arg0) {
 		if (arg0 == diskImage)
 			playPause(diskImage);
-
 	}
 
 	// Make sure the stream stops when the fragment is destroyed
